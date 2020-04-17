@@ -63,6 +63,7 @@ jobs:
     - name: Add Lienol packages
       run: cd openwrt && echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default && cat feeds.conf.default
       #run: cd openwrt && echo "src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-19.07" >> feeds.conf.default && cat feeds.conf.default
+    - name: Add helloword packages
       run: cd openwrt && echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default && cat feeds.conf.default
 #===============================================================================================================================================================
 
