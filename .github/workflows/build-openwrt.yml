@@ -153,12 +153,20 @@ jobs:
 
         
 #===========其他diy上传==============================================================
+
     - name: Upload dl directory
       uses: actions/upload-artifact@master
-      if: always()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_dl
+        name: OpenWrt_dl${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/dl
+                
+    #- name: Upload dl directory
+      #uses: actions/upload-artifact@master
+      #if: always()
+      #with:
+        #name: OpenWrt_dl
+        #path: openwrt/dl
 
     #- name: Upload packages directory
       #uses: actions/upload-artifact@master
