@@ -1,3 +1,0 @@
-0 2 * * * /usr/share/shadowsocksr/ssrplusupdate.sh >>/tmp/ssrplus.log 2>&1
-0 2 * * * /usr/share/UnblockNeteaseMusic/update_core.sh 2>&1
-0 6 * * * /usr/share/adbyby/adblock.sh > /tmp/adupdate.log 2>&1
